@@ -1,0 +1,10 @@
+<form {{action "submitChanges" on="submit"}}>
+  {{input-field type="text" label="Username" value=username onchange=(action (mut username))}}
+
+  {{input-field type="number" label="Value" value=value onchange=(action (mut value))}}
+
+  <div class="form-footer">
+    {{#link-to "book.detail" book.id class="btn-reset"}}reset{{/link-to}}
+    <button type="submit" class="btn-submit">save</button>
+  </div>
+</form>

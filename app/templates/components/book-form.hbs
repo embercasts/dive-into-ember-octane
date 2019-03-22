@@ -1,0 +1,33 @@
+<div class="field">
+  <label>Title:</label>
+  {{input type="text" placeholder="Title" value=title}}
+</div>
+
+<div class="field">
+  <label>ISBN:</label>
+  {{input type="text" placeholder="ISBN" value=isbn}}
+</div>
+
+<div class="field">
+  <label>Publish Date:</label>
+  {{input type="date" placeholder="Publish Date" value=publishDate}}
+</div>
+
+<div class="field">
+  <label>Author:</label>
+  <p class="control">
+    {{#ui-select label="Select Author" value=author options=authors onchange=(action "changeAuthor") as |authorOption|}}
+      {{authorOption.last}}, {{authorOption.first}}
+    {{/ui-select}}
+
+  </p>
+</div>
+
+<div class="field">
+  <label>Don't See Your Author?</label>
+  {{new-author-modal onsave=(action (mut author))}}
+</div>
+
+<div class="form-footer">
+  <button type="submit" class="btn-submit">save</button>
+</div>

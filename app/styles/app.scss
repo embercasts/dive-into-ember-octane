@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import 'embercasts-library';
+
+@import "ember-power-select";
+
+.main-nav--dark {
+  background: $c-text;
+  color: $c-border-search;
+
+  .logo {
+    background: #aaa;
+  }
+
+  li a:hover, li a.active {
+    background: $c-black
+  }
+}
+
+.main-nav {
+  box-shadow: 0 0 0.4rem $c-shadow;
+  z-index: 1;
+}
+
+.panel-heading {
+  box-shadow: 0 0 0.4rem rgba($c-shadow, 0.2);
+}
+
+.slide-container {
+  z-index: 1;
+}
+
+.slide-out {
+  background: $c-white;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.4)
+}
+
+.slide-out-card {
+  height: calc(100vh - 5rem);
+  box-shadow: none;
+}
+
+.review {
+  &.red {
+    background: rgba(255, 0, 0, 0.2);
+  }
+  &.green {
+    background: rgba(0, 250, 0, 0.2);
+  }
+}
+
+
+button.btn-back {
+  padding: 0;
+}
+
+button.btn-cart {
+  @extend .btn-back;
+  position: fixed;
+  z-index: 3;
+  bottom: 1rem;
+  right: 1rem;
+  width: auto;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+
+  box-shadow: 0.2rem 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+
+  &::before {
+    content: '';
+  }
+
+  &::after {
+    display: inline-block;
+    width: 2rem;
+    font-family: FontAwesome;
+    content: '\f07a';
+  }
+
+  .count {
+    display: inline-block;
+    margin-left: 0.4rem;
+  }
+}
+
+select {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px #ccc solid;
+  border-radius: 0.2rem;
+  outline: none;
+  background: #f8f9fc;
+  color: #432b4f;
+  font: inherit;
+}
+
+.item-store {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0.2rem 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+
+  p {
+    margin: 0;
+  }
+}
